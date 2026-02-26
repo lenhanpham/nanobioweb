@@ -8,27 +8,24 @@ export const headerData = {
     },
     {
       text: 'Our Science',
-      href: getPermalink('/our-science'),
+      links: [
+        { text: 'The Platform', href: getPermalink('/our-science') },
+        { text: 'R&D & Insights', href: getPermalink('/research') },
+      ],
     },
     {
       text: 'Solutions',
-      href: getPermalink('/solutions'),
-    },
-    {
-      text: 'Sustainability',
-      href: getPermalink('/sustainability'),
-    },
-    {
-      text: 'R&D',
-      href: getPermalink('/research'),
+      links: [
+        { text: 'Core Range', href: getPermalink('/solutions') },
+        { text: 'Sustainability', href: getPermalink('/sustainability') },
+      ],
     },
     {
       text: 'About Us',
-      href: getPermalink('/about'),
-    },
-    {
-      text: 'Contact',
-      href: getPermalink('/contact'),
+      links: [
+        { text: 'Company', href: getPermalink('/about') },
+        { text: 'Contact', href: getPermalink('/contact') },
+      ],
     }
   ],
   actions: [{ text: 'Partner with us', href: 'https://nanobiotech.com.au/contact', target: '_blank' }],
