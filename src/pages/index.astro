@@ -1,0 +1,176 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Hoang Nhan Nano Biotech | Revolutionising Crop Immunity',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Partner with Us',
+        href: 'https://nanobiotech.com.au/contact',
+        target: '_blank',
+        icon: 'tabler:calendar-event',
+      },
+      { text: 'Discover Our Science', href: '/our-science' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1624806993335-5c8a05d85929?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Agricultural sprayer operating in a field of young plants',
+    }}
+  >
+    <Fragment slot="title">
+      Revolutionising Crop Immunity through <br class="hidden md:inline" />
+      <span class="text-primary dark:text-white highlight">Circular Nanobiotechnology</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Welcome to Hoang Nhan Nano Biotech, where innovation meets sustainability. Our mission is to revolutionize plant health and protection through eco-friendly solutions that harness the power of nanotechnology. We repurpose materials like sugarcane bagasse, rice husk, and seaweed into advanced nanoparticles.</span
+      >
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget (Who We Are) **************** -->
+
+  <Content
+    isReversed
+    tagline="Who We Are"
+    title="Pioneers in Green Nano Biomaterials"
+    items={[
+      {
+        title: 'Our Mission',
+        description:
+          'Founded on a commitment to green science, we blend rigorous research with practical applications to support farmers, agribusinesses, and ecosystems worldwide.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Our Team',
+        description:
+          'Based in Melbourne, Victoria, we are a dynamic team of scientists, engineers, and visionaries passionate about sustainable agriculture and biotechnology.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Our Approach',
+        description:
+          'We collaborate with academic institutions, industry partners, and farmers to ensure our work is grounded in real-world needs and ethical standards.',
+        icon: 'tabler:microscope',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+      alt: 'Team holding plant sprouts',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Innovation should serve the planet.</h3>
+      Reducing agricultural waste, promoting biodiversity, and enabling resilient farming practices.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget (Problem / Solution) **************** -->
+
+  <Content
+    isReversed
+    tagline="The Challenge vs. The Future"
+    title="Why Nano-Targeted Solutions?"
+    items={[
+      {
+        title: 'Traditional Chemical Inputs',
+        description:
+          'Conventional fertilizers and pesticides suffer from high leaching, low absorption rates, and environmental degradation, harming local ecosystems like the Great Barrier Reef.',
+        icon: 'tabler:alert-triangle',
+      },
+      {
+        title: 'HN Nano-Targeted Solutions',
+        description:
+          'Our bio-based nano-carriers ensure controlled release and systemic uptake. Nutrients and protections are delivered precisely when needed, drastically reducing runoff and increasing efficacy.',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1628102491629-778571d893a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+      alt: 'Molecular comparison abstract',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">A New Era of Agriculture</h3>
+      Moving from inefficient broad-spectrum routines to targeted, smart delivery.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features Widget (Key Pillars) *************** -->
+
+  <Features
+    id="pillars"
+    tagline="Our Key Pillars"
+    title="The Foundation of HN Nano Biotech"
+    subtitle="Built on science, driven by sustainability."
+    items={[
+      {
+        title: 'Green Solution',
+        description:
+          'We develop truly green materials and deliver sustainable solutions that strengthen agricultural systems. By harnessing nanobiotechnology and circular principles, we create eco-friendly nano-biomaterials from agricultural by-products reducing waste, minimizing chemical inputs, and empowering healthier, more resilient crops.',
+        icon: 'tabler:leaf',
+      },
+      {
+        title: 'Sustainability',
+        description:
+          'We transform agricultural by-products into high-value green nanobiomaterials turning waste into a powerful ally for agriculture. These advanced materials reinforce plant defenses, providing effective protection against diseases, environmental stresses, and pests.',
+        icon: 'tabler:recycle',
+      },
+      {
+        title: 'Environmental Protection',
+        description:
+          'We are committed to closing the loop on agricultural waste. Through innovative valorisation, we transform abundant by-products into advanced green nanobiomaterials, turning what was once discarded into a powerful resource.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Crop Protection & Enhancement',
+        description:
+          'We empower plants to protect themselves earlier and more effectively. By strengthening natural immunity at the molecular level, our nanobiotechnology solutions help crops resist pests and diseases from the start and maintain strong, healthy growth.',
+        icon: 'tabler:plant',
+      }
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Review our R&D',
+        href: '/research',
+        icon: 'tabler:microscope',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Proven in Australian Soils
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Explore our interactive field trials and robust data validating our natural approach to crop enhancement.
+    </Fragment>
+  </CallToAction>
+</Layout>

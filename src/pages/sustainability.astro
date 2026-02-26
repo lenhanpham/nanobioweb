@@ -1,0 +1,73 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Sustainability & Circularity | Hoang Nhan Nano Biotech',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Sustainability & Circularity"
+    title="Pioneering the Waste-to-Resource Pipeline"
+    subtitle="We are committed to closing the loop. By turning agricultural waste into high-performance nano-solutions, we reduce landfill burdens while simultaneously protecting future crops."
+    image={{
+      src: 'https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Sustainable cycle and green hands',
+    }}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Our Impact Metrics"
+    subtitle="Tracking our carbon offset and waste reduction initiatives locally in Australia."
+    stats={[
+      { title: 'Tons of Waste Repurposed', amount: '12,500+' },
+      { title: 'Reduction in Nitrate Runoff', amount: '40%' },
+      { title: 'Acres Treated Systemically', amount: '50k+' },
+      { title: 'CO2 Equivalent Saved (Tons)', amount: '3,200' },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    title="The Circular Economy in Action"
+    items={[
+      {
+        title: 'Step 1: Waste Valorisation',
+        description:
+          'In Australia alone, millions of tons of agricultural by-products (citrus skins, husks, bagasse) are burned or sent to landfills every year. We intercept this waste stream.',
+        icon: 'tabler:trash-x',
+      },
+      {
+        title: 'Step 2: Upcycling via Green Chemistry',
+        description:
+          'We extract the core natural polymers from these materials with zero toxic solvents, reducing our own carbon and chemical footprint in the manufacturing phase.',
+        icon: 'tabler:flask',
+      },
+      {
+        title: 'Step 3: Returning to the Soil',
+        description:
+          'These extracted polymers become our nano-carriers. They go back into the field as natural protectors and fertilizers—eventually degrading safely into the soil grid without negative ecological side effects.',
+        icon: 'tabler:seeding',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Circular economy visualization',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">A Positive Ecological Feedback Loop</h3>
+      What comes from the earth, protects the earth.
+    </Fragment>
+  </Content>
+</Layout>

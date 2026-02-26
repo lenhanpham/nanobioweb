@@ -1,0 +1,74 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact / Partnering | Hoang Nhan Nano Biotech',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Partner With Us" title="Let's Grow Together" subtitle="We're actively seeking forward-thinking distributors, agronomists, and trial partners across Australia." />
+
+  <!-- ContactUs Widget **************** -->
+
+  <ContactUs
+    id="form"
+    title="Direct Lead Generation"
+    subtitle="Connect directly with our Chief Agronomists or Business Development team."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Full Name / Company',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email Address',
+      },
+      {
+        type: 'text',
+        name: 'phone',
+        label: 'Phone Number',
+      },
+    ]}
+    textarea={{
+      label: 'Please describe your request (e.g. Distributor Inquiry, Field Trial Request, General Sales)',
+    }}
+    disclaimer={{
+      label:
+        'By submitting this contact form, you acknowledge and agree to the collection of your personal information for follow-up.',
+    }}
+    description="Our team guarantees a personalized response within 24 business hours."
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Ways We Can Collaborate"
+    items={[
+      {
+        title: 'Commercial Distribution',
+        description: `Join our growing network of rural supply stores and distributors offering next-gen crop protection.`,
+        icon: 'tabler:truck-delivery',
+      },
+      {
+        title: 'Field Trial Partners',
+        description:
+          'Got a specific crop or soil challenge? Let’s set up a documented trial on your acreage to prove the nano-advantage.',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'R&D Collaboration',
+        description:
+          'We partner with universities and agricultural research bodies to push the boundaries of green nanotech.',
+        icon: 'tabler:microscope',
+      },
+    ]}
+  />
+</Layout>

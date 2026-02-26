@@ -1,0 +1,97 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Our Science | Hoang Nhan Nano Biotech',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="The Platform"
+    title="Driven by Nanobiotechnology"
+    subtitle="We are pioneers in transforming agricultural byproducts and natural resources into cutting-edge green nano biomaterials. Our mission is to revolutionize plant health and protection."
+    image={{
+      src: 'https://images.unsplash.com/photo-1682785868540-92558c18a676?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Gloved hands of contemporary scientist putting small sample of green seedling in petri dish',
+    }}
+  />
+
+  <!-- Steps Widget (The Extraction Process) ****************** -->
+
+  <Steps
+    title="The Waste-to-Resource Extraction Process"
+    subtitle="By repurposing materials like sugarcane bagasse, rice husk, and seaweed into advanced nanoparticles, we create products that enhance plant immunity and defend against diseases, pests, and fungi."
+    items={[
+      {
+        title: 'Sourcing Specific By-Products',
+        description:
+          'We collect abundant agricultural waste such as sugarcane bagasse and rice husk, along with natural resources like seaweed.',
+        icon: 'tabler:leaf',
+      },
+      {
+        title: 'Green Refining & Processing',
+        description:
+          'Using environmentally friendly chemistry, we break down these raw materials without relying on harsh, toxic solvents.',
+        icon: 'tabler:flask-2',
+      },
+      {
+        title: 'Nanobiomaterial Engineering',
+        description:
+          'These materials are engineered at the nanoscale to deliver targeted benefits for plant health, penetrating the cuticle far more efficiently than standard applications.',
+        icon: 'tabler:microscope',
+      },
+      {
+        title: 'Formulating Custom Solutions',
+        description:
+          'From lab-scale research to scalable production, the final product is formulated into stable active nano powders or liquids, ready for greenhouses and large-scale farming operations.',
+        icon: 'tabler:tractor',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1601601319316-bace8ae2b548?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Laboratory glassware in a scientific experiment',
+    }}
+  />
+
+  <!-- Features2 Widget (The 4 Nano-Advantages) ************** -->
+
+  <Features2
+    title="Engineered at the Nanoscale"
+    subtitle="Targeted benefits for plant health."
+    columns={2}
+    items={[
+      {
+        title: 'Enhancing Immunity',
+        description:
+          'Our products boost plants\' natural defenses, improving resistance to environmental stresses like drought, salinity, and temperature fluctuations.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Disease and Pest Protection',
+        description:
+          'We create barriers against fungi, bacteria, viruses, worms, and insects, reducing the need for chemical pesticides and promoting organic farming.',
+        icon: 'tabler:bug-off',
+      },
+      {
+        title: 'Sustainable Sourcing',
+        description:
+          'By upcycling waste materials like rice husk and seaweed, we minimize landfill contributions and support circular economies in agriculture.',
+        icon: 'tabler:recycle',
+      },
+      {
+        title: 'Custom Solutions',
+        description:
+          'From lab-scale research to scalable production, we offer tailored nanomaterials for crops, greenhouses, and broadacre farming operations.',
+        icon: 'tabler:adjustments',
+      }
+    ]}
+  />
+
+</Layout>

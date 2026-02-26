@@ -1,0 +1,83 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Solutions | Hoang Nhan Nano Biotech',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Product Portfolio"
+    title="Tailored Nanomaterials for Plant Health"
+    subtitle="We have been employing nano biotech innovation for crop protection and maximising crop yields. Explore our core range of active nano powders, liquid boosters, and organic bionutrients."
+    image={{
+      src: 'https://images.unsplash.com/photo-1457530378978-8bac673b8062?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Farmer holding mineral fertilizers with green plants',
+    }}
+  />
+
+  <!-- Content Widget (Deep Dive into Products) **************** -->
+
+  <Content
+    isReversed
+    tagline="Our Products"
+    title="Active Nano Products for Agriculture"
+    items={[
+      {
+        title: 'Active Nano Powder',
+        description:
+          'Highly concentrated active nano powder suitable for multiple agricultural purposes, from soil conditioning to direct foliar treatments.',
+        icon: 'tabler:box-model',
+      },
+      {
+        title: 'Immunity Boosting Liquids',
+        description:
+          'Liquid nano solutions ready for boosting plant immunity and health. Applied effectively to manage stress events like drought or temperature fluctuations.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Pest & Disease Control Liquids',
+        description:
+          'Liquid nano bioproducts designed for plant and crop protection from diseases, fungi, bacteria, viruses, worms, and insects, significantly reducing chemical dependency.',
+        icon: 'tabler:bug-off',
+      },
+      {
+        title: 'Organic Bionutrients',
+        description:
+          'Organic nano bionutrients engineered for rapid plant growth and structural developments, providing exact, targeted nutrition directly into the vascular tissue.',
+        icon: 'tabler:seeding',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Farmers inspecting lush green leaves',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Advanced Formulations</h3>
+      Derived from sugarcane bagasse, rice husk, and naturally occurring seaweed.
+    </Fragment>
+  </Content>
+
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Request Custom Solutions',
+        href: 'https://nanobiotech.com.au/contact',
+      },
+    ]}
+    title="Need a Specific Application?"
+    subtitle="From lab-scale research to scalable production, we offer tailored nanomaterials for crops, greenhouses, and large-scale farming operations."
+  />
+</Layout>

@@ -1,0 +1,73 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Services',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Services"
+    title="High-tech green solutions"
+    subtitle="We offer advanced nanotechnology solutions for agriculture sustainability."
+    actions={[{ variant: 'primary', target: '_blank', text: 'Contact Us', href: 'https://nanobiotech.com.au/contact' }]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Services Hero Image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Our Core Solutions"
+    subtitle="Discover how our products can help your crops."
+    columns={2}
+    items={[
+      {
+        title: 'Crop Immunity Boost',
+        description:
+          'Liquid nano solutions ready for boosting plant immunity and health.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Pest Control',
+        description:
+          'Liquid nano bioproducts for plant and crop protection from diseases.',
+        icon: 'tabler:bug-off',
+      },
+      {
+        title: 'Bionutrients',
+        description:
+          'Organic nano bionutrients for plant developments.',
+        icon: 'tabler:leaf',
+      },
+      {
+        title: 'Agricultural Powder',
+        description:
+          'Active nano powder for multiple agricultural purposes.',
+        icon: 'tabler:flask',
+      }
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get in touch',
+        href: 'https://nanobiotech.com.au/contact',
+      },
+    ]}
+    title="Ready to boost your crop yield?"
+    subtitle="Contact us today for a consultation."
+  />
+</Layout>

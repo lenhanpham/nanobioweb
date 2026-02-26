@@ -1,0 +1,109 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+
+const metadata = {
+  title: 'About Us | Hoang Nhan Nano Biotech',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About Us"
+    image={{
+      src: 'https://images.unsplash.com/photo-1602867741746-6df80f40b3f6?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Farmer standing on a green grass field',
+    }}
+  >
+    <Fragment slot="title">
+      Australian Made & <br />
+      <span class="text-primary dark:text-white highlight"> Research-Driven</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Based in Melbourne, Victoria, we are a dynamic team of scientists, engineers, and visionaries passionate about sustainable agriculture and biotechnology. Our startup brings together expertise in nanotechnology, materials science, and environmental biology to develop breakthrough eco-friendly solutions.
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget (Founders) **************** -->
+
+  <Content
+    isReversed
+    title="Our Founders"
+    items={[
+      {
+        title: 'Deep Expertise in Chemistry',
+        description:
+          'Our startup is led by two distinguished co-founders whose deep expertise in chemistry and a shared passion for sustainable innovation form the foundation of our work.',
+        icon: 'tabler:flask',
+      },
+      {
+        title: 'Advanced Materials Science',
+        description:
+          'With complementary backgrounds in advanced materials science and green chemistry, they have combined their knowledge to pioneer eco-friendly nanotechnology solutions derived from natural agricultural byproducts.',
+        icon: 'tabler:microscope',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Scientists reviewing data in a laboratory',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Scientific Leadership</h3>
+      Pioneering the intersection of green chemistry and agriculture.
+    </Fragment>
+  </Content>
+
+
+  <!-- Steps2 Widget (Our Vision) ****************** -->
+
+  <Steps2
+    title="Our Vision & Team"
+    subtitle="Led by pioneering scientists and agronomists, our team bridges the gap between the laboratory bench and the tractor."
+    items={[
+      {
+        title: 'Waste to Value',
+        description:
+          'Our founders and researchers have years of experience in converting waste into value, drawing from abundant natural resources like sugarcane bagasse and rice husks to create high-performance biomaterials.',
+      },
+      {
+        title: 'Collaborative Excellence',
+        description:
+          'We collaborate with academic institutions, industry partners, and farmers to ensure our work is grounded in real-world needs and ethical standards.',
+      },
+      {
+        title: 'Empowering Farmers',
+        description:
+          'Technology is useless if it’s too hard to use. Our nano-solutions are formulated to plug seamlessly into existing irrigation and spray setups without costly overhauls.',
+      },
+      {
+        title: 'Regulatory Alignment',
+        description:
+          'We engage transparently with local authorities, building pathways aligned with Australian standards and paving the way for organic certifications.',
+      }
+    ]}
+  />
+
+  <!-- Features3 Widget (Muddy Boots Reality) **************** -->
+
+  <Features3
+    title="We Trust Muddy Boots Over Stock Photos"
+    subtitle="Our science doesn’t stop at a white coat. We spend our time in the dirt, talking to farmers, and understanding what actually moves the needle at harvest time."
+    columns={1}
+    items={[
+      {
+        title: 'Field Driven Data',
+        description:
+          'At our core, we are driven by a shared belief that innovation should serve the planet: reducing agricultural waste, promoting biodiversity, and enabling resilient farming practices across Australia and the world.',
+        icon: 'tabler:tractor',
+      },
+    ]}
+  />
+
+</Layout>

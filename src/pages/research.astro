@@ -1,0 +1,91 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'R&D & Insights | Hoang Nhan Nano Biotech',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Proof of Efficacy"
+    title="Data-Driven Results in Australian Soils"
+    subtitle="We don't expect our farmers to operate on promises. Our nano-biomaterials are rigorously tested in local Australian conditions—from the high salinity of the WA Wheatbelt to the volatile weather of the Hunter Valley."
+    image={{
+      src: 'https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?auto=format&fit=crop&w=2070&q=80',
+      alt: 'Agronomist working in a field with a tablet',
+    }}
+  />
+
+  <!-- Content Widget (Data Visualization) **************** -->
+
+  <Content
+    isReversed
+    tagline="Visualising Success"
+    title="Yield & Resilience Increases"
+    items={[
+      {
+        title: '30% Increase in Nitrogen Use Efficiency',
+        description:
+          'Field trials on broadacre wheat showed that applying our Nano-Primers alongside standard NPK fertilizers allowed plants to uptake 30% more nitrogen before it leached away.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: '95% Pathogen Suppression',
+        description:
+          'In horticulture trials against aggressive fungal rot, our smart-delivery copper-nano combinations reduced infection rates by over 95% compared to control groups.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Enhanced Drought Tolerance',
+        description:
+          'Treated crops demonstrated a significantly extended wilting point during consecutive 40°C+ summer days due to the systemic immune priming.',
+        icon: 'tabler:sun',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2070&q=80',
+      alt: 'Financial data charts and graphs on screen',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Unmatched Performance</h3>
+      Real numbers from real Australian farms.
+    </Fragment>
+  </Content>
+
+  <!-- Features2 Widget (Map of Trials) ************** -->
+
+  <Features2
+    title="Nationwide Trial Sites"
+    subtitle="Our R&D spans the continent to ensure broad spectrum efficacy across all hardiness zones."
+    columns={2}
+    items={[
+      {
+        title: 'Western Australia Wheatbelt',
+        description: 'Focusing on broadacre salinity resilience and low-phosphorus uptake optimisation.',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Hunter Valley, NSW',
+        description: 'Viticulture trials combating botrytis bunch rot and enhancing canopy health.',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Queensland Tropics',
+        description: 'Sugarcane trials measuring runoff reduction to protect the Great Barrier Reef ecosystem.',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Murray-Darling Basin',
+        description: 'Horticulture trials measuring water retention and irrigation efficiency improvements.',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+</Layout>
