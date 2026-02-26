@@ -9,8 +9,8 @@ export const headerData = {
     {
       text: 'Our Science',
       links: [
-        { text: 'The Platform', href: getPermalink('/our-science') },
-        { text: 'R&D & Insights', href: getPermalink('/research') },
+        { text: 'Platform', href: getPermalink('/our-science') },
+        { text: 'R&D', href: getPermalink('/research') },
       ],
     },
     {
