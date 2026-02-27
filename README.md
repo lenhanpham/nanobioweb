@@ -5,9 +5,10 @@
     </picture>
   </a>
 </p>
-# Hoang Nhan Nano Biotech
 
-Welcome to the official repository for the **Hoang Nhan Nano Biotech** website. This platform showcases our sustainable and advanced nanobiotechnology solutions for agriculture, crop protection, and plant health.
+# Hoang Nhan NanoBiotech
+
+Welcome to the official repository for the **Hoang Nhan NanoBiotech** website. This platform showcases our sustainable and advanced nanobiotechnology solutions for agriculture, crop protection, and plant health.
 
 [https://www.nanobiotech.com.au](https://www.nanobiotech.com.au)
 
