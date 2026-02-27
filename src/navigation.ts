@@ -68,6 +68,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/lenhanpham/nanobioweb' },
   ],
   footNote: `
-    © <a class="text-blue-600 underline dark:text-muted" href="https://nanobiotech.com.au/"> Hoang Nhan Nano Biotech</a> · All rights reserved.
+    © <a class="text-blue-600 underline dark:text-muted" href="https://nanobiotech.com.au/"> HN NanoBiotech</a> · All rights reserved.
   `,
 };
