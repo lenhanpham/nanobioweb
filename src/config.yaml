@@ -1,5 +1,5 @@
 site:
-  name: HNNBT
+  name: HN NanoBioTech
   site: 'https://nanobiotech.com.au'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: HN Nano Biotech
-    template: '%s — HN Nano Biotech'
-  description: "HN Nano Biotech focuses on sustainable solutions for crop protection and enhancement of crop yields nation and world wide."
+    default: HN NanoBiotech
+    template: '%s — HN NanoBiotech'
+  description: "HN NanoBiotech focuses on sustainable solutions for crop protection and enhancement of crop yields nation and world wide."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: HN Nano Biotech
+    site_name: HN NanoBiotech
     images:
       - url: '~/assets/images/default.png'
         width: 1200
