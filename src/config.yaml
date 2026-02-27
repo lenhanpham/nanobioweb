@@ -11,7 +11,7 @@ metadata:
   title:
     default: HN NanoBiotech
     template: '%s — HN NanoBiotech'
-  description: "HN NanoBiotech focuses on sustainable solutions for crop protection and enhancement of crop yields nation and world wide."
+  description: 'HN NanoBiotech focuses on sustainable solutions for crop protection and enhancement of crop yields nation and world wide.'
   robots:
     index: true
     follow: true

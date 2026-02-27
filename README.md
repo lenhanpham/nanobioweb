@@ -9,6 +9,7 @@ Hoang Nhan Nano Biotech focuses on sustainable solutions for crop protection and
 ## Tech Stack
 
 This website is built with modern web technologies:
+
 - **[Astro](https://astro.build/)** - A fast, content-focused web framework.
 - **[Tailwind CSS](https://tailwindcss.com/)** - A utility-first CSS framework for rapid UI development.
 - **TypeScript** - For scalable and robust code.
@@ -23,6 +24,7 @@ This website is built with modern web technologies:
 ### Installation
 
 1. Clone the repository:
+
    ```shell
    git clone https://github.com/lenhanpham/nanobioweb.git
    cd nanobioweb
@@ -36,14 +38,17 @@ This website is built with modern web technologies:
 ### Development
 
 Start the local development server:
+
 ```shell
 npm run dev
 ```
+
 The site will be available at `http://localhost:4321`.
 
 ### Build & Deploy
 
 Build the production-ready site:
+
 ```shell
 npm run build
 ```
@@ -53,11 +58,13 @@ This project is configured to use the Cloudflare adapter (`@astrojs/cloudflare`)
 ## Code Quality
 
 Run tests, linting, and formatting checks to ensure code quality:
+
 ```shell
 npm run check
 ```
 
 Automatically fix linting and formatting issues:
+
 ```shell
 npm run fix
 ```

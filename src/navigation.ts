@@ -26,7 +26,7 @@ export const headerData = {
         { text: 'Company', href: getPermalink('/about') },
         { text: 'Contact', href: getPermalink('/contact') },
       ],
-    }
+    },
   ],
   actions: [{ text: 'Partner with us', href: 'https://nanobiotech.com.au/contact', target: '_blank' }],
 };
@@ -46,15 +46,15 @@ export const footerData = {
       links: [
         { text: 'Green solution', href: getPermalink('/services') },
         { text: 'Crop protection', href: getPermalink('/services') },
-      ]
+      ],
     },
     {
       title: 'Resources',
       links: [
         { text: 'Blog', href: getPermalink('/blog') },
         { text: 'News', href: getPermalink('/news') },
-      ]
-    }
+      ],
+    },
   ],
   secondaryLinks: [
     { text: 'Terms', href: getPermalink('/terms') },
