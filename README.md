@@ -81,4 +81,4 @@ npm run fix
 
 ## License
 
-Copyright © Hoang Nhan Nano Biotech. All rights reserved.
+Copyright © [Hoang Nhan NanoBiotech](https://www.nanobiotech.com.au). All rights reserved.
