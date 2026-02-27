@@ -1,5 +1,5 @@
 site:
-  name: HN NanoBioTech
+  name: HN NanoBiotech
   site: 'https://nanobiotech.com.au'
   base: '/'
   trailingSlash: false
