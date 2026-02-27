@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/lenhanpham/nanobioweb">
+  <a href="https://www.nanobiotech.com.au">
     <picture>
       <img src="src/assets/favicons/favicon.svg" alt="Hoang Nhan NanoBiotech">
     </picture>
