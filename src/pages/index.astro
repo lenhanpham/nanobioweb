@@ -38,8 +38,8 @@ const metadata = {
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Welcome to Hoang Nhan NanoBiotech, where innovation meets sustainability. Our mission is to revolutionize plant
-        health and protection through eco-friendly solutions that harness the power of nanotechnology. We repurpose
+        Welcome to Hoang Nhan NanoBiotech, where innovation meets sustainability. Our mission is to enhance plant health
+        and protection through eco-friendly solutions that harness the power of nanotechnology. We repurpose
         agricultural by-products into advanced green nano-biomaterials.</span
       >
     </Fragment>
@@ -93,18 +93,41 @@ const metadata = {
   <Content
     isReversed
     tagline="The Challenge vs. The Future"
-    title="Why Nano-Targeted Solutions?"
+    title="Why Green NanoBiotech Solutions?"
     items={[
       {
         title: 'Traditional Chemical Inputs',
         description:
-          'Conventional fertilizers and pesticides suffer from high leaching, low absorption rates, and environmental degradation, harming local ecosystems like the Great Barrier Reef.',
+          '<ul class="list-disc ml-4 space-y-2">\n' +
+          '  <li><strong>Environmental Harm:</strong> Chemical inputs cause significant ecological damage.</li>\n' +
+          '  <li><strong>Reduced Efficacy:</strong> High leaching and low absorption limit agronomic effectiveness.</li>\n' +
+          '  <li><strong>Persistence & Accumulation:</strong> Agrochemicals remain in soil and water, accumulating in the food chain.</li>\n' +
+          '  <li><strong>Biodiversity Loss:</strong> Residues disrupt ecosystems and harm beneficial, non-target organisms.</li>\n' +
+          '  <li><strong>Health Risks:</strong> Residues in food can induce genetic alterations and developmental abnormalities.</li>\n' +
+          '  <li><strong>Global Threat:</strong> These impacts collectively threaten ecosystem stability, food safety, and public health.</li>\n' +
+          '</ul>',
         icon: 'tabler:alert-triangle',
       },
       {
-        title: 'HN Nano-Targeted Solutions',
+        title: 'Agricultural By-Products in Australia',
         description:
-          'Our bio-based nano-carriers ensure controlled release and systemic uptake. Nutrients and protections are delivered precisely when needed, drastically reducing runoff and increasing efficacy.',
+          '<ul class="list-disc ml-4 space-y-2">\n' +
+          '  <li><strong>Massive Waste:</strong> Australia generates over 30 million tonnes of agricultural by-products (like rice hulls and sugarcane bagasse) every year. Combustion generates bagasse ash with over 230,000 tons annually.</li>\n' +
+          '  <li><strong>Environmental Degradation:</strong> Current disposal practices, such as open burning and landfilling, cause severe air and water pollution.</li>\n' +
+          '  <li><strong>Untapped Potential:</strong> These agricultural residues are incredibly rich in valuable biopolymers, cellulose, and high-purity silica, potassium and phosphorus.</li>\n' +
+          '</ul>',
+        icon: 'tabler:wheat',
+      },
+      {
+        title: 'HN NanoBiotech Solutions',
+        description:
+          '<ul class="list-disc ml-4 space-y-2">\n' +
+          '  <li><strong>Advanced Nano-Synthesis:</strong> We conduct cutting-edge research to transform agricultural waste into high-value, high-tech green nano-biomaterials.</li>\n' +
+          '  <li><strong>Precision Bio-Carriers:</strong> Our state-of-the-art bio-based nano-carriers ensure systemic uptake and controlled release, delivering nutrients and protection precisely when crops need them.</li>\n' +
+          '  <li><strong>True Circular Economy:</strong> Our sophisticated synthesis process generates absolutely zero hazardous waste. Natural raw materials are fully repurposed into next-generation fertilizers and bio-nano formulations.</li>\n' +
+          '  <li><strong>Enhanced Immunity & Growth:</strong> Our highly engineered solutions actively stimulate robust root development, strengthen plant cell walls, and fortify natural resistance against environmental extremes.</li>\n' +
+          '  <li><strong>Targeted Pathogen Suppression:</strong> Highly effective at naturally and forcefully suppressing devastating plant pathogenic fungi and oomycetes, including <em>Pythium</em>, <em>Phytophthora</em>, <em>Fusarium</em>, and <em>Rhizoctonia</em>.</li>\n' +
+          '</ul>',
         icon: 'tabler:check',
       },
     ]}
@@ -115,7 +138,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">A New Era of Agriculture</h3>
-      Moving from inefficient broad-spectrum routines to targeted, smart delivery.
+      Moving from inefficient broad-spectrum hazardous chemicals to green, safe, naturally-derived, induced-resistance solutions.
     </Fragment>
 
     <Fragment slot="bg">
