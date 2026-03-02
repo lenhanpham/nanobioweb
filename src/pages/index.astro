@@ -26,8 +26,8 @@ const metadata = {
       { text: 'Discover Our Science', href: '/our-science' },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1624806993335-5c8a05d85929?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      alt: 'Agricultural sprayer operating in a field of young plants',
+      src: '~/assets/images/bypro-plant-fruit.png',
+      alt: 'The cycle from agricultural by-products to advanced green nano-biomaterials',
     }}
   >
     <Fragment slot="title">
@@ -91,7 +91,6 @@ const metadata = {
   <!-- Content Widget (Problem / Solution) **************** -->
 
   <Content
-    isReversed
     tagline="The Challenge vs. The Future"
     title="Why Green NanoBiotech Solutions?"
     items={[
@@ -118,27 +117,32 @@ const metadata = {
           '</ul>',
         icon: 'tabler:wheat',
       },
-      {
-        title: 'HN NanoBiotech Solutions',
-        description:
-          '<ul class="list-disc ml-4 space-y-2">\n' +
-          '  <li><strong>Advanced Nano-Synthesis:</strong> We conduct cutting-edge research to transform agricultural waste into high-value, high-tech green nano-biomaterials.</li>\n' +
-          '  <li><strong>Precision Bio-Carriers:</strong> Our state-of-the-art bio-based nano-carriers ensure systemic uptake and controlled release, delivering nutrients and protection precisely when crops need them.</li>\n' +
-          '  <li><strong>True Circular Economy:</strong> Our sophisticated synthesis process generates absolutely zero hazardous waste. Natural raw materials are fully repurposed into next-generation fertilizers and bio-nano formulations.</li>\n' +
-          '  <li><strong>Enhanced Immunity & Growth:</strong> Our highly engineered solutions actively stimulate robust root development, strengthen plant cell walls, and fortify natural resistance against environmental extremes.</li>\n' +
-          '  <li><strong>Targeted Pathogen Suppression:</strong> Highly effective at naturally and forcefully suppressing devastating plant pathogenic fungi and oomycetes, including <em>Pythium</em>, <em>Phytophthora</em>, <em>Fusarium</em>, and <em>Rhizoctonia</em>.</li>\n' +
-          '</ul>',
-        icon: 'tabler:check',
-      },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1628102491629-778571d893a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
-      alt: 'Molecular comparison abstract',
+    bottomImage={{
+      src: '~/assets/images/modern-farm-corn.png',
+      alt: 'Modern farm with corn',
     }}
   >
+    <Fragment slot="image">
+      <div class="flex gap-3 items-start">
+        <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+        </div>
+        <div>
+          <h4 class="text-lg font-medium leading-6 dark:text-white">HN NanoBiotech Solutions</h4>
+          <ul class="list-disc ml-4 space-y-2 text-muted dark:text-slate-400 mt-2">
+            <li><strong>Advanced Nano-Synthesis:</strong> We conduct cutting-edge research to transform agricultural waste into high-value, high-tech green nano-biomaterials.</li>
+            <li><strong>Precision Bio-Carriers:</strong> Our state-of-the-art bio-based nano-carriers ensure systemic uptake and controlled release, delivering nutrients and protection precisely when crops need them.</li>
+            <li><strong>True Circular Economy:</strong> Our sophisticated synthesis process generates absolutely zero hazardous waste. Natural raw materials are fully repurposed into next-generation fertilizers and bio-nano formulations.</li>
+            <li><strong>Enhanced Immunity & Growth:</strong> Our highly engineered solutions actively stimulate robust root development, strengthen plant cell walls, and fortify natural resistance against environmental extremes.</li>
+            <li><strong>Targeted Pathogen Suppression:</strong> Highly effective at naturally and forcefully suppressing devastating plant pathogenic fungi and oomycetes, including <em>Pythium</em>, <em>Phytophthora</em>, <em>Fusarium</em>, and <em>Rhizoctonia</em>.</li>
+          </ul>
+        </div>
+      </div>
+    </Fragment>
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">A New Era of Agriculture</h3>
-      Moving from inefficient broad-spectrum hazardous chemicals to green, safe, naturally-derived, induced-resistance solutions.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2 text-center">A New Era of Agriculture</h3>
+      <p class="text-center">Moving from inefficient broad-spectrum hazardous chemicals to green, safe, naturally-derived, induced-resistance solutions.</p>
     </Fragment>
 
     <Fragment slot="bg">

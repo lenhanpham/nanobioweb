@@ -15,6 +15,7 @@ const {
   items = [],
   columns,
   image = await Astro.slots.render('image'),
+  bottomImage,
   isReversed = false,
   isAfterContent = false,
 
@@ -42,10 +43,9 @@ const {
     }}
   />
   <div class="mx-auto max-w-7xl p-4 md:px-8">
+    {content && <div class="mb-8 text-lg dark:text-slate-400" set:html={content} />}
     <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
       <div class="md:basis-1/2 self-center">
-        {content && <div class="mb-12 text-lg dark:text-slate-400" set:html={content} />}
-
         {
           callToAction && (
             <div class="mt-[-40px] mb-8 text-primary">
@@ -90,5 +90,22 @@ const {
         }
       </div>
     </div>
+    {
+      bottomImage && (
+        <div class="mt-12 flex justify-center">
+          <div class="w-3/5">
+            <Image
+              class="rounded-lg shadow-lg w-full"
+              width={800}
+              height={500}
+              widths={[400, 768, 1200]}
+              sizes="60vw"
+              layout="responsive"
+              {...bottomImage}
+            />
+          </div>
+        </div>
+      )
+    }
   </div>
 </WidgetWrapper>
