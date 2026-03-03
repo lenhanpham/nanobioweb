@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import { Icon } from 'astro-icon/components';
 
 const metadata = {
   title: 'Hoang Nhan NanoBiotech | Revolutionising Crop Yields',
@@ -119,7 +120,7 @@ const metadata = {
       },
     ]}
     bottomImage={{
-      src: '~/assets/images/modern-farm-corn.png',
+      src: '~/assets/images/modern-farm.png',
       alt: 'Modern farm with corn',
     }}
   >
@@ -128,17 +129,7 @@ const metadata = {
         <div
           class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            ><path
-              d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"
-            ></path></svg
-          >
+          <Icon name="tabler:microscope" class="h-5 w-5" />
         </div>
         <div>
           <h4 class="text-lg font-medium leading-6 dark:text-white">HN NanoBiotech Solutions</h4>

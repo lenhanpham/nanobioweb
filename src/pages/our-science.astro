@@ -4,8 +4,9 @@ import Hero from '~/components/widgets/Hero.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
+
 const metadata = {
-  title: 'Our Science | Hoang Nhan Nano Biotech',
+  title: 'Our Science | Hoang Nhan NanoBiotech',
 };
 ---
 
@@ -17,8 +18,11 @@ const metadata = {
     title="Driven by Nanobiotechnology"
     subtitle="We are pioneers in transforming agricultural byproducts and natural resources into cutting-edge green nano biomaterials. Our mission is to revolutionize plant health and protection."
     image={{
-      src: 'https://images.unsplash.com/photo-1682785868540-92558c18a676?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      alt: 'Gloved hands of contemporary scientist putting small sample of green seedling in petri dish',
+      src: '~/assets/images/bypro-lab-plants.png',
+      alt: 'By-products lab plants',
+      class: 'mx-auto rounded-md max-w-sm',
+      width: 1024,
+      height: 416,
     }}
   />
 
@@ -54,9 +58,11 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1601601319316-bace8ae2b548?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      alt: 'Laboratory glassware in a scientific experiment',
+      src: '~/assets/images/production-process.png',
+      alt: 'Production process',
     }}
+
+    classes={{ image: 'max-h-96 md:max-h-[480px]' }}
   />
 
   <!-- Features2 Widget (The 4 Nano-Advantages) ************** -->

@@ -10,7 +10,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-
+opencode.json
 
 # environment variables
 .env
@@ -22,3 +22,4 @@ pnpm-debug.log*
 pnpm-lock.yaml
 
 .astro
+.gitignore

@@ -37,12 +37,15 @@ const {
     </div>
     {
       image && (
-        <div class="relative md:basis-1/2">
+        <div class:list={['relative md:basis-1/2', (classes?.image as string) ? 'flex items-center' : '']}>
           {typeof image === 'string' ? (
             <Fragment set:html={image} />
           ) : (
             <Image
-              class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
+              class:list={[
+                'object-cover object-top w-full rounded-md shadow-lg bg-gray-400 dark:bg-slate-700',
+                (classes?.image as string) ? (classes.image as string) : 'inset-0 md:absolute md:h-full',
+              ]}
               widths={[400, 768]}
               sizes="(max-width: 768px) 100vw, 432px"
               width={432}
