@@ -17,13 +17,18 @@ const metadata = {
     title="Tailored Nanomaterials for Plant Health"
     subtitle="We have been employing nano biotech innovation for crop protection and maximising crop yields. Explore our core range of active nano powders, liquid boosters, and organic bionutrients."
     image={{
-      src: 'https://images.unsplash.com/photo-1457530378978-8bac673b8062?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      alt: 'Farmer holding mineral fertilizers with green plants',
+      src: '~/assets/images/three-fruits.png',
+      alt: 'Crops thriving with nano bioproducts',
+      class: 'mx-auto rounded-lg shadow-lg',
+      width: 978,
+      height: 391,
+      layout: 'constrained',
     }}
   />
 
-  <!-- Content Widget (Deep Dive into Products) **************** -->
 
+{/*
+  <!-- Content Widget (Deep Dive into Products) **************** -->
   <Content
     isReversed
     tagline="Our Products"
@@ -62,6 +67,167 @@ const metadata = {
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Advanced Formulations</h3>
       Derived from sugarcane bagasse, rice husk, and naturally occurring seaweed.
+    </Fragment>
+  </Content>
+*/}
+
+  <!-- Core Range Product Showcase **************** -->
+
+  <Content
+    tagline="Core Range"
+    title="Nano NPK"
+    subtitle="Balanced macro-nutrition at nano scale"
+    items={[
+      {
+        title: 'What it is',
+        description:
+          'A nano-formulated blend of nitrogen, phosphorus, and potassium engineered for rapid plant uptake through foliar application or fertigation.',
+        icon: 'tabler:leaf',
+      },
+      {
+        title: 'Key Benefits',
+        description:
+          'Improves nutrient use efficiency by up to 40%, reduces fertiliser input, and promotes uniform crop development across diverse soil types.',
+        icon: 'tabler:chart-arrows-vertical',
+      },
+      {
+        title: 'Application',
+        description:
+          'Suitable for vegetables, cereals, and fruit crops. Compatible with most irrigation and spray systems.',
+        icon: 'tabler:droplet',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/products/nano-NPK.png',
+      alt: 'Nano NPK nano fertiliser product',
+      class: 'mx-auto rounded-lg shadow-lg',
+      width: 150,
+      height: 359,
+      layout: 'constrained',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Precision Macro-nutrition</h3>
+      Nano-sized NPK particles penetrate the leaf cuticle and root membrane far more effectively than conventional fertilisers, delivering nutrients exactly where the plant needs them.
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    isAfterContent
+    title="Nano Silica"
+    subtitle="Structural strength from the ground up"
+    items={[
+      {
+        title: 'What it is',
+        description:
+          'Bio-derived nano silicon dioxide sourced from rice husk ash, providing plants with bioavailable silica at an optimal particle size.',
+        icon: 'tabler:atom',
+      },
+      {
+        title: 'Key Benefits',
+        description:
+          'Thickens cell walls, improves drought and heat tolerance, reduces lodging in cereals, and boosts resistance to fungal pathogens.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Application',
+        description:
+          'Applied as a foliar spray or soil drench. Particularly effective for rice, wheat, sugarcane, and horticultural crops.',
+        icon: 'tabler:plant-2',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/products/nano-silica.png',
+      alt: 'Nano Silica biostimulant product',
+      class: 'mx-auto rounded-lg shadow-lg',
+      width: 150,
+      height: 359,
+      layout: 'constrained',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Silicon-Powered Resilience</h3>
+      Derived from abundant agricultural by-products, Nano Silica strengthens plant architecture while reducing reliance on synthetic fungicides.
+    </Fragment>
+  </Content>
+
+  <Content
+    isAfterContent
+    title="Nano Copper"
+    subtitle="Targeted antimicrobial protection"
+    items={[
+      {
+        title: 'What it is',
+        description:
+          'Ultra-fine copper nano particles with broad-spectrum antimicrobial activity, formulated for minimal phytotoxicity at effective concentrations.',
+        icon: 'tabler:microscope',
+      },
+      {
+        title: 'Key Benefits',
+        description:
+          'Controls bacterial and fungal diseases, inhibits pathogen sporulation, and supports immune priming — using a fraction of the copper load of traditional sprays.',
+        icon: 'tabler:bug-off',
+      },
+      {
+        title: 'Application',
+        description:
+          'Foliar spray for disease management in vines, stone fruit, citrus, and field vegetables. Registered for organic compliance review.',
+        icon: 'tabler:spray',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/products/nano-copper.png',
+      alt: 'Nano Copper crop protection product',
+      class: 'mx-auto rounded-lg shadow-lg',
+      width: 150,
+      height: 359,
+      layout: 'constrained',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Next-Generation Copper Chemistry</h3>
+      Lower doses, higher precision — Nano Copper delivers effective disease suppression while significantly reducing the environmental copper footprint.
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    isAfterContent
+    title="Nano Chitosan"
+    subtitle="Natural immunity activator"
+    items={[
+      {
+        title: 'What it is',
+        description:
+          'Nano-encapsulated chitosan derived from crustacean shell waste, bio-processed into particles that activate plant systemic acquired resistance.',
+        icon: 'tabler:dna',
+      },
+      {
+        title: 'Key Benefits',
+        description:
+          "Triggers the plant's own defence pathways, enhances root development, stimulates growth hormones, and improves post-harvest shelf life.",
+        icon: 'tabler:seeding',
+      },
+      {
+        title: 'Application',
+        description:
+          'Seed treatment, root drench, or foliar spray. Effective across broadacre grain, horticulture, and hydroponic systems.',
+        icon: 'tabler:flask',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/products/nano-chitosan.png',
+      alt: 'Nano Chitosan biostimulant product',
+      class: 'mx-auto rounded-lg shadow-lg',
+      width: 150,
+      height: 359,
+      layout: 'constrained',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Nature's Own Defence System</h3>
+      Sourced from renewable marine by-products, Nano Chitosan activates the plant's innate immune response — reducing disease pressure without synthetic chemistry.
     </Fragment>
   </Content>
 
