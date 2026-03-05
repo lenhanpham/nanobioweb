@@ -15,10 +15,7 @@ export const headerData = {
     },
     {
       text: 'Solutions',
-      links: [
-        { text: 'Core Range', href: getPermalink('/solutions') },
-        /* { text: 'Sustainability', href: getPermalink('/sustainability') }, */
-      ],
+      href: getPermalink('/solutions'),
     },
     {
       text: 'About Us',
