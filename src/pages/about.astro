@@ -1,7 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
+import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 
@@ -70,7 +70,7 @@ const metadata = {
 
   <!-- Steps2 Widget (Our Vision) ****************** -->
 
-  <Steps2
+  <Steps
     title="Our Vision & Team"
     subtitle="Led by pioneering scientists and agronomists, our team bridges the gap between the laboratory bench and the tractor."
     items={[
@@ -95,6 +95,11 @@ const metadata = {
           'We engage transparently with local authorities, building pathways aligned with Australian standards and paving the way for organic certifications.',
       },
     ]}
+      image={{
+      src: '~/assets/images/vision.png',
+      alt: 'Vision',
+    }}
+    classes={{ image: 'mx-auto max-w-sm rounded-md shadow-lg' }}
   />
 
   <!-- Features3 Widget (Muddy Boots Reality) **************** -->
