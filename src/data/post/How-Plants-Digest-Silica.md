@@ -15,7 +15,7 @@ metadata:
   canonical: https://www.nanobiotech.com.au/how-plants-digest-silica
 ---
 
-In the world of agriculture, Silicon (Si) has long been known as a silent hero—a "beneficial element" that helps plants stand tall and resist stress. But what happens when we shrink this element down to the nanoscale? A recent review article published in _Frontiers in Plant Science_ (2024) reveals that **Silicon Nanoparticles (SiNPs)** are not just a smaller version of silica; they are a revolutionary tool for sustainable farming.
+In the world of agriculture, Silicon (Si) has long been known as a silent hero—a "beneficial element" that helps plants stand tall and resist stress. But what happens when we shrink this element down to the nanoscale? **Silicon Nanoparticles (SiNPs)** are not just a smaller version of silica; they are a revolutionary tool for sustainable farming.
 
 Let’s dive into how plants "digest" these tiny particles and why they are becoming the backbone of modern, eco-friendly agriculture.
 
@@ -54,7 +54,7 @@ The most exciting development is **Green Synthesis**, which uses plant extracts 
 
 #### The "Digestive" Journey: How Plants Absorb Nano-Silica
 
-How does a solid nanoparticle get _inside_ a plant cell? The paper explains a sophisticated step-by-step mechanism for both leaf and root uptake.
+How does a solid nanoparticle get _inside_ a plant cell? A sophisticated step-by-step mechanism for both leaf and root uptake is explained below.
 
 <img src="https://www.frontiersin.org/files/Articles/1393458/xml-images/fpls-15-1393458-g003.webp" alt="The uptake and translocation of SiNPs in plants." loading="lazy" />
 
