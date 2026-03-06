@@ -223,9 +223,17 @@ export const astroAssetsOptimizer: ImagesOptimizer = async (
     return [];
   }
 
+  const aspectRatio = _width && _height ? _width / _height : undefined;
+
   return Promise.all(
     breakpoints.map(async (w: number) => {
-      const result = await getImage({ src: image, width: w, inferSize: true, ...(format ? { format: format } : {}) });
+      const h = aspectRatio ? Math.floor(w / aspectRatio) : undefined;
+      const result = await getImage({
+        src: image,
+        width: w,
+        ...(h ? { height: h } : { inferSize: true }),
+        ...(format ? { format: format } : {}),
+      });
 
       return {
         src: result?.src,
