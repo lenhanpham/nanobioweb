@@ -93,17 +93,14 @@ const {
     {
       bottomImage && (
         <div class="mt-12 flex justify-center">
-          <div class="w-3/5">
-            <Image
-              class="rounded-lg shadow-lg w-full"
-              width={800}
-              height={500}
-              widths={[400, 768, 1200]}
-              sizes="60vw"
-              layout="responsive"
-              {...bottomImage}
-            />
-          </div>
+          <Image
+            class="mx-auto rounded-lg shadow-lg"
+            width={754}
+            height={500}
+            widths={[400, 768, 1200]}
+            layout="constrained"
+            {...bottomImage}
+          />
         </div>
       )
     }
