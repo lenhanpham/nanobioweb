@@ -49,7 +49,7 @@ export const footerData = {
       title: 'Resources',
       links: [
         { text: 'Blog', href: getPermalink('/blog') },
-        { text: 'News', href: getPermalink('/news') },
+        //{ text: 'News', href: getPermalink('/news') },
       ],
     },
   ],
