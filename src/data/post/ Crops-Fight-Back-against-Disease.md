@@ -50,7 +50,7 @@ Agricultural scientists categorize these chemicals into two groups:
 2.  **Phytoalexins:** These are "on-demand" chemicals produced only after the plant detects an attack. They include antimicrobial compounds like flavonoids and alkaloids that make the environment toxic for the pathogen [1], [3].
 
 ![Rose Rust Disease](https://www.brandywine.org/sites/default/files/styles/body_full/public/media/1024px-Phragmidium_0542.jpg?itok=Z3EzdMcU)
-_Figure 2: Fungal pathogens like Rose Rust must overcome both physical and chemical barriers to colonize a host. (Photo by Velella)_
+_Fungal pathogens like Rose Rust must overcome both physical and chemical barriers to colonize a host. (Photo by Velella)_
 
 ---
 
@@ -71,7 +71,7 @@ Pathogens often fight back by injecting "effectors"—proteins that suppress the
 One of the most dramatic defenses is the **Hypersensitive Response (HR)**. If a plant detects a biotrophic pathogen (one that needs living tissue to survive), it will purposely kill the infected cells and those immediately surrounding them. This "cell suicide" (apoptosis) starves the pathogen and prevents it from spreading [1]. In the field, we see this as small brown spots on leaves.
 
 ![Hypersensitive Response in Tobacco and Soy](https://www.brandywine.org/sites/default/files/styles/body_full/public/media/Photography-tobacco-a-and-soy-leaves-b-showing-hypersensitive-response-to-P-s.png?itok=Gogrx9L2)
-_Figure 3: Brown spots on tobacco (A) and soy (B) leaves indicate the Hypersensitive Response—a strategic sacrifice to save the rest of the plant. (Source: ResearchGate)_
+_Brown spots on tobacco (A) and soy (B) leaves indicate the Hypersensitive Response—a strategic sacrifice to save the rest of the plant. (Source: ResearchGate)_
 
 ---
 
@@ -92,7 +92,7 @@ Interestingly, not all microbes are enemies. Beneficial soil organisms like **My
 In modern farming, we often grow **monocultures**—large areas of the same crop variety. While efficient, this makes it easier for pathogens to spread rapidly if they find a way to bypass the specific R-genes of that variety [1].
 
 ![Corn Stunt Disease](https://www.brandywine.org/sites/default/files/styles/body_full/public/media/Corn_Stunt_whole_plant.jpg?itok=D5CASDoc)
-_Figure 4: Monocultures are particularly vulnerable to diseases like Corn Stunt if defenses are breached. (Photo: Clemson University - USDA)_
+_Monocultures are particularly vulnerable to diseases like Corn Stunt if defenses are breached. (Photo: Clemson University - USDA)_
 
 ##### Climate Change and Stress
 
