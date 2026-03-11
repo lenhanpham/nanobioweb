@@ -68,12 +68,21 @@ _The pathways of SiNP entry through leaves (foliar) and roots._
 2.  **Entry Points:** Particles smaller than 5nm can slip through the waxy **cuticle**, while larger ones enter through the **stomata** (tiny breathing pores).
 3.  **Moving In:** Once inside, they move through the leaf tissues into the "highways" of the plant—the xylem and phloem.
 
+<img src="https://raw.githubusercontent.com/lenhanpham/Hosting/refs/heads/main/nanobioweb/How-Plants-Digest-Silica/Flowering-plants-and-the-role-of-phloem-and-xylem.jpg" alt="The “highways” of the plant—the xylem and phloem." loading="lazy" />
+
+_The "highways" of the plant—the xylem and phloem._
+
+
 #### **B. Root Uptake (Through the Soil)**
 
 1.  **The Direct Route:** SiNPs can directly penetrate "soft" spots in the roots, like root tips or lateral root junctions.
 2.  **The "Slow" Route:** Some SiNPs dissolve in the soil into **silicic acid**.
 3.  **Transporter Service:** The plant uses specialized "transporter proteins" (like Lsi1 and Lsi2) to pump this silicic acid into the roots.
 4.  **Circulation:** The silicon is then swept up to the rest of the plant, strengthening stems and leaves.
+
+<img src="https://raw.githubusercontent.com/lenhanpham/Hosting/refs/heads/main/nanobioweb/How-Plants-Digest-Silica/transport-protein-Lsi1-transport%20protein-Lsi2.png" alt="“Transporter proteins” Lsi1 and Lsi2." loading="lazy" />
+
+_Transporter proteins" Lsi1 and Lsi2._
 
 ---
 
@@ -116,3 +125,5 @@ Nature has always used silicon—we're just finally learning how to deliver it i
 #### **Reference**
 
 Yan, G., Huang, Q., Zhao, S., Xu, Y., He, Y., Nikolic, M., Nikolic, N., Liang, Y., & Zhu, Z. (2024). **Silicon nanoparticles in sustainable agriculture: synthesis, absorption, and plant stress alleviation.** _Frontiers in Plant Science_, 15:1393458. doi: [10.3389/fpls.2024.1393458](https://doi.org/10.3389/fpls.2024.1393458)
+
+
