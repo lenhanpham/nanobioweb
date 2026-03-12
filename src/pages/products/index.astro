@@ -1,0 +1,84 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Image from '~/components/common/Image.astro';
+import { getCollection } from 'astro:content';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Products | Hoang Nhan NanoBiotech',
+};
+
+const products = await getCollection('product');
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero ******************* -->
+
+  <Hero
+    tagline="Product Portfolio"
+    title="Tailored Nanomaterials for Plant Health"
+    subtitle="From balanced macro-nutrition to targeted disease control — explore our growing range of green nano-biomaterials engineered for Australian and global agriculture."
+    image={{
+      src: '~/assets/images/three-fruits.png',
+      alt: 'Crops thriving with nano bioproducts',
+      class: 'mx-auto rounded-lg shadow-lg',
+      width: 978,
+      height: 391,
+      layout: 'constrained',
+    }}
+  />
+
+  <!-- Product Grid ******************* -->
+
+  <section class="py-12 lg:py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <p class="text-base font-semibold uppercase tracking-widest text-primary dark:text-blue-200">
+          Our Products
+        </p>
+        <h2 class="text-4xl font-bold tracking-tight dark:text-white sm:text-5xl mt-2">
+          The Core Range
+        </h2>
+        <p class="mt-4 text-xl text-muted dark:text-slate-400">
+          Click on any product to explore full details, benefits, and application guides.
+        </p>
+      </div>
+
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          products.map((product) => (
+            <a
+              href={getPermalink(`/products/${product.id}`)}
+              class="group flex flex-col rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+            >
+              <div class="flex items-center justify-center bg-blue-50 dark:bg-slate-700 p-6">
+                <Image
+                  src={product.data.image.src}
+                  alt={product.data.image.alt}
+                  width={160}
+                  height={200}
+                  objectFit="contain"
+                  class="max-h-48 w-auto group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                  {product.data.name}
+                </h3>
+                {product.data.subtitle && (
+                  <p class="mt-2 text-sm text-muted dark:text-slate-400 flex-grow">
+                    {product.data.subtitle}
+                  </p>
+                )}
+                <span class="mt-4 inline-flex items-center text-sm font-semibold text-primary dark:text-blue-400">
+                  View details →
+                </span>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>

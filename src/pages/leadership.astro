@@ -1,0 +1,87 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Leadership | Hoang Nhan Nano Biotech',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Leadership"
+    image={{
+      src: '~/assets/images/lab.jpg',
+      alt: 'Lab facilities',
+      width: 880,
+      height: 1105,
+      class: 'mx-auto rounded-md max-w-sm',
+    }}
+  >
+    <Fragment slot="title">
+      Scientific <br />
+      <span class="text-primary dark:text-white highlight"> Leadership</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      HN NanoBiotech is led by two distinguished co-founders whose deep expertise in chemistry and a shared passion for
+      sustainable innovation form the foundation of our work.
+    </Fragment>
+  </Hero>
+
+  <!-- Co-founders **************** -->
+
+  <Content
+    isReversed
+    tagline="Our Founders"
+    title="Pioneering the Intersection of Green Chemistry & Agriculture"
+    items={[
+      {
+        title: 'Deep Expertise in Chemistry',
+        description:
+          'Our startup is led by two distinguished co-founders whose deep expertise in chemistry and a shared passion for sustainable innovation form the foundation of our work. Their combined knowledge drives every formulation we bring to market.',
+        icon: 'tabler:flask',
+      },
+      {
+        title: 'Advanced Materials Science',
+        description:
+          'With complementary backgrounds in advanced materials science and green chemistry, they have combined their knowledge to pioneer eco-friendly nanotechnology solutions derived from natural agricultural byproducts.',
+        icon: 'tabler:microscope',
+      },
+      {
+        title: 'Field-to-Lab Philosophy',
+        description:
+          'Both founders bring hands-on agronomic understanding alongside laboratory rigour — ensuring our science is grounded in the realities of Australian farming conditions.',
+        icon: 'tabler:tractor',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/lab.jpg',
+      alt: 'Lab facilities',
+      width: 880,
+      height: 1105,
+      class: 'mx-auto rounded-md max-w-sm',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Scientific Leadership</h3>
+      Pioneering the intersection of green chemistry and agriculture.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- CTA **************** -->
+
+  <CallToAction
+    actions={[{ variant: 'primary', text: 'Partner with Us', href: '/contact' }]}
+    title="Work with Our Team"
+    subtitle="We are actively seeking forward-thinking collaborators, academic partners, and industry allies across Australia and beyond."
+  />
+</Layout>

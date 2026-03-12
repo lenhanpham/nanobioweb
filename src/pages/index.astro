@@ -1,15 +1,20 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import { Icon } from 'astro-icon/components';
+import Image from '~/components/common/Image.astro';
+import Button from '~/components/ui/Button.astro';
+import { getCollection } from 'astro:content';
+import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
   title: 'Hoang Nhan NanoBiotech | Revolutionising Crop Yields',
   ignoreTitleTemplate: true,
 };
+
+const products = await getCollection('product');
 ---
 
 <Layout metadata={metadata}>
@@ -19,10 +24,9 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Partner with Us',
-        href: 'https://nanobiotech.com.au/contact',
-        target: '_blank',
-        icon: 'tabler:calendar-event',
+        text: 'Explore Products',
+        href: '/products',
+        icon: 'tabler:flask',
       },
       { text: 'Discover Our Science', href: '/our-science' },
     ]}
@@ -42,60 +46,13 @@ const metadata = {
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Welcome to Hoang Nhan NanoBiotech, where innovation meets sustainability. Our mission is to enhance plant health
-        and protection through eco-friendly solutions that harness the power of nanotechnology. We repurpose
-        agricultural by-products into advanced green nano-biomaterials.</span
-      >
+        From Australian agricultural waste to next-generation crop protection. We engineer green nano-biomaterials that
+        boost yields, fight disease, and close the loop on farm waste.
+      </span>
     </Fragment>
   </Hero>
 
-  <!-- Content Widget (Who We Are) **************** -->
-
-  <Content
-    isReversed
-    tagline="Who We Are"
-    title="Pioneers in Green Nano Biomaterials"
-    items={[
-      {
-        title: 'Our Mission',
-        description:
-          'Founded on a commitment to green science, we blend rigorous research with practical applications to support farmers, agribusinesses, and ecosystems worldwide.',
-        icon: 'tabler:check',
-      },
-      {
-        title: 'Our Team',
-        description:
-          'Based in Melbourne, Victoria, we are a dynamic team of scientists, engineers, and visionaries passionate about sustainable agriculture and biotechnology.',
-        icon: 'tabler:users',
-      },
-      {
-        title: 'Our Approach',
-        description:
-          'We collaborate with academic institutions, industry partners, and farmers to ensure our work is grounded in real-world needs and ethical standards.',
-        icon: 'tabler:microscope',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
-      alt: 'Team holding plant sprouts',
-      width: 600,
-      height: 600,
-      class: 'mx-auto rounded-md max-w-sm',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Innovation should serve the planet.
-      </h3>
-      Reducing agricultural waste, promoting biodiversity, and enabling resilient farming practices.
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget (Problem / Solution) **************** -->
+  <!-- Content Widget (Problem / Solution — slimmed) **************** -->
 
   <Content
     tagline="The Challenge vs. The Future"
@@ -104,77 +61,33 @@ const metadata = {
       {
         title: 'Traditional Chemical Inputs',
         description:
-          '<ul class="list-disc ml-4 space-y-2">\n' +
-          '  <li><strong>Environmental Harm:</strong> Chemical inputs cause significant ecological damage.</li>\n' +
-          '  <li><strong>Reduced Efficacy:</strong> High leaching and low absorption limit agronomic effectiveness.</li>\n' +
-          '  <li><strong>Persistence & Accumulation:</strong> Agrochemicals remain in soil and water, accumulating in the food chain.</li>\n' +
-          '  <li><strong>Biodiversity Loss:</strong> Residues disrupt ecosystems and harm beneficial, non-target organisms.</li>\n' +
-          '  <li><strong>Health Risks:</strong> Residues in food can induce genetic alterations and developmental abnormalities.</li>\n' +
-          '  <li><strong>Global Threat:</strong> These impacts collectively threaten ecosystem stability, food safety, and public health.</li>\n' +
-          '</ul>',
+          'Chemical pesticides and fertilisers cause environmental harm, persist in soil and water, threaten biodiversity, and leave residues in food — posing serious long-term risks to ecosystems and public health.',
         icon: 'tabler:alert-triangle',
       },
       {
-        title: 'Agricultural By-Products in Australia',
+        title: 'Agricultural Waste, Rethought',
         description:
-          '<ul class="list-disc ml-4 space-y-2">\n' +
-          '  <li><strong>Massive Waste:</strong> Australia generates over 30 million tonnes of agricultural by-products (like rice hulls and sugarcane bagasse) every year. Combustion generates bagasse ash with over 230,000 tons annually.</li>\n' +
-          '  <li><strong>Environmental Degradation:</strong> Current disposal practices, such as open burning and landfilling, cause severe air and water pollution.</li>\n' +
-          '  <li><strong>Untapped Potential:</strong> These agricultural residues are incredibly rich in valuable biopolymers, cellulose, and high-purity silica, potassium and phosphorus.</li>\n' +
-          '</ul>',
+          'Australia generates over 30 million tonnes of agricultural by-products annually. Instead of burning or landfilling them, we unlock the high-value biopolymers, silica, and cellulose locked inside.',
         icon: 'tabler:wheat',
       },
     ]}
-    bottomImage={{
+    image={{
       src: '~/assets/images/farm-from-top.png',
       alt: 'Farm from the top',
       width: 754,
       height: 500,
     }}
   >
-    <Fragment slot="image">
-      <div class="flex gap-3 items-start">
-        <div
-          class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1"
-        >
-          <Icon name="tabler:microscope" class="h-5 w-5" />
-        </div>
-        <div>
-          <h4 class="text-lg font-medium leading-6 dark:text-white">HN NanoBiotech Solutions</h4>
-          <ul class="list-disc ml-4 space-y-2 mt-2">
-            <li>
-              <strong>Advanced Nano-Synthesis:</strong> We conduct cutting-edge research to transform agricultural waste
-              into high-value, high-tech green nano-biomaterials.
-            </li>
-            <li>
-              <strong>Precision Bio-Carriers:</strong> Our state-of-the-art bio-based nano-carriers ensure systemic uptake
-              and controlled release, delivering nutrients and protection precisely when crops need them.
-            </li>
-            <li>
-              <strong>True Circular Economy:</strong> Our sophisticated synthesis process generates absolutely zero hazardous
-              waste. Natural raw materials are fully repurposed into next-generation fertilizers and bio-nano formulations.
-            </li>
-            <li>
-              <strong>Enhanced Immunity & Growth:</strong> Our highly engineered solutions actively stimulate robust root
-              development, strengthen plant cell walls, and fortify natural resistance against environmental extremes.
-            </li>
-            <li>
-              <strong>Targeted Pathogen Suppression:</strong> Highly effective at naturally and forcefully suppressing devastating
-              plant pathogenic fungi and oomycetes, including <em>Pythium</em>, <em>Phytophthora</em>, <em>Fusarium</em
-              >, and <em>Rhizoctonia</em>.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </Fragment>
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2 text-center">
         A New Era of Agriculture
       </h3>
       <p class="text-center">
-        Moving from inefficient broad-spectrum hazardous chemicals to green, safe, naturally-derived, induced-resistance
-        solutions.
+        Moving from hazardous broad-spectrum chemicals to safe, naturally-derived, induced-resistance solutions.
       </p>
+      <div class="text-center mt-6">
+        <Button variant="secondary" text="Explore the science behind our process" href="/our-science" icon="tabler:arrow-right" />
+      </div>
     </Fragment>
 
     <Fragment slot="bg">
@@ -182,40 +95,133 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Features Widget (Key Pillars) *************** -->
+  <!-- Product Showcase **************** -->
 
-  <Features
-    id="pillars"
-    tagline="Our Key Pillars"
-    title="The Foundation of HN NanoBiotech"
-    subtitle="Built on science, driven by sustainability."
+  <section class="py-12 lg:py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <p class="text-base font-semibold uppercase tracking-widest text-primary dark:text-blue-200">
+          Product Portfolio
+        </p>
+        <h2 class="text-4xl font-bold tracking-tight dark:text-white sm:text-5xl mt-2">Tailored Nano-Biomaterials</h2>
+        <p class="mt-4 text-xl text-muted dark:text-slate-400">
+          From precision nutrition to pathogen control — engineered for Australian farms.
+        </p>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          products.map((product) => (
+            <a
+              href={getPermalink(`/products/${product.id}`)}
+              class="group flex flex-col rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+            >
+              <div class="flex items-center justify-center bg-blue-50 dark:bg-slate-700 p-5">
+                <Image
+                  src={product.data.image.src}
+                  alt={product.data.image.alt}
+                  width={120}
+                  height={150}
+                  objectFit="contain"
+                  class="max-h-32"
+                />
+              </div>
+              <div class="p-5">
+                <h3 class="text-lg font-bold dark:text-white group-hover:text-primary transition-colors">
+                  {product.data.name}
+                </h3>
+                <p class="text-sm text-muted dark:text-slate-400 mt-1">{product.data.subtitle}</p>
+                <p class="mt-3 text-sm font-medium text-primary">View details →</p>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+
+      <div class="text-center mt-10">
+        <Button variant="primary" text="Browse All Products" href="/products" icon="tabler:arrow-right" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Highlights **************** -->
+
+  <Features2
+    tagline="Proven in Australian Soils"
+    title="Data-Driven Results from Our Field Trials"
+    subtitle="We don't ask farmers to operate on promises. Our nano-biomaterials are rigorously tested across Australian conditions."
+    columns={3}
+    callToAction={{ variant: 'secondary', text: 'See all R&D data and trial sites', href: '/research', icon: 'tabler:arrow-right' }}
     items={[
       {
-        title: 'Green Solution',
+        title: '30% Higher Nitrogen Efficiency',
         description:
-          'We develop truly green materials and deliver sustainable solutions that strengthen agricultural systems. By harnessing nanobiotechnology and circular principles, we create eco-friendly nano-biomaterials from agricultural by-products reducing waste, minimizing chemical inputs, and empowering healthier, more resilient crops.',
-        icon: 'tabler:leaf',
+          'Field trials on broadacre wheat showed crops uptake 30% more nitrogen before leaching when using our Nano-Primers alongside standard NPK.',
+        icon: 'tabler:chart-bar',
       },
       {
-        title: 'Sustainability',
+        title: '95% Pathogen Suppression',
         description:
-          'We transform agricultural by-products into high-value green nanobiomaterials turning waste into a powerful ally for agriculture. These advanced materials reinforce plant defenses, providing effective protection against diseases, environmental stresses, and pests.',
-        icon: 'tabler:recycle',
-      },
-      {
-        title: 'Environmental Protection',
-        description:
-          'We are committed to closing the loop on agricultural waste. Through innovative valorisation, we transform abundant by-products into advanced green nanobiomaterials, turning what was once discarded into a powerful resource.',
+          'Horticulture trials against aggressive fungal rot showed over 95% reduction in infection rates compared to control groups.',
         icon: 'tabler:shield-check',
       },
       {
-        title: 'Crop Protection & Enhancement',
+        title: 'Enhanced Drought Tolerance',
         description:
-          'We empower plants to protect themselves earlier and more effectively. By strengthening natural immunity at the molecular level, our nanobiotechnology solutions help crops resist pests and diseases from the start and maintain strong, healthy growth.',
-        icon: 'tabler:plant',
+          'Treated crops extended their wilting point through consecutive 40°C+ summer days due to systemic immune priming.',
+        icon: 'tabler:sun',
       },
     ]}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- About / Team Teaser **************** -->
+
+  <Content
+    isReversed
+    tagline="Who We Are"
+    title="Australian-Made, Research-Driven"
+    items={[
+      {
+        title: 'Our Science',
+        description:
+          'Pioneering the transformation of agricultural by-products into high-performance green nano-biomaterials using environmentally friendly chemistry.',
+        icon: 'tabler:microscope',
+      },
+      {
+        title: 'Our Team',
+        description:
+          'Based in Melbourne, our co-founders bring deep expertise in green chemistry and materials science, backed by years of hands-on agronomic experience.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Our Mission',
+        description:
+          'Close the loop on agricultural waste — empowering farmers with safe, effective, and sustainable nano-solutions that protect crops without harming the planet.',
+        icon: 'tabler:leaf',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/team.png',
+      alt: 'Team in farm field',
+      width: 733,
+      height: 400,
+      class: 'mx-auto rounded-md max-w-sm',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Innovation should serve the planet.
+      </h3>
+      <p>Reducing agricultural waste, promoting biodiversity, and enabling resilient farming practices.</p>
+      <div class="mt-6">
+        <Button variant="secondary" text="Meet the team and our goals" href="/our-goals" icon="tabler:arrow-right" />
+      </div>
+    </Fragment>
+  </Content>
 
   <!-- CallToAction Widget *********** -->
 
@@ -223,16 +229,20 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Review our R&D',
-        href: '/research',
-        icon: 'tabler:microscope',
+        text: 'Partner with Us',
+        href: '/contact',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        text: 'Meet the Leadership',
+        href: '/leadership',
       },
     ]}
   >
-    <Fragment slot="title"> Being proven in Australian Soils </Fragment>
+    <Fragment slot="title">Ready to Grow Together?</Fragment>
 
     <Fragment slot="subtitle">
-      Explore our interactive field trials and robust data validating our natural approach to crop enhancement.
+      We're actively seeking forward-thinking distributors, agronomists, and trial partners across Australia.
     </Fragment>
   </CallToAction>
 </Layout>

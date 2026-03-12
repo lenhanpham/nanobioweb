@@ -250,6 +250,7 @@ export interface Features extends Omit<Headline, 'classes'>, Widget {
   items?: Array<Item>;
   columns?: number;
   defaultIcon?: string;
+  callToAction?: CallToAction;
   callToAction1?: CallToAction;
   callToAction2?: CallToAction;
   isReversed?: boolean;

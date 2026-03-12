@@ -3,26 +3,28 @@ import { getPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Home',
-      href: getPermalink('/'),
-    },
-    {
-      text: 'Our Science',
-      links: [
-        { text: 'Platform', href: getPermalink('/our-science') },
-        { text: 'R&D', href: getPermalink('/research') },
-      ],
-    },
-    {
-      text: 'Solutions',
-      href: getPermalink('/solutions'),
-    },
-    {
       text: 'About Us',
+      href: getPermalink('/about-us'),
       links: [
-        { text: 'Company', href: getPermalink('/about') },
-        { text: 'Contact', href: getPermalink('/contact') },
+        { text: 'Our Goals', href: getPermalink('/our-goals') },
+        { text: 'Our Science', href: getPermalink('/our-science') },
+        { text: 'Leadership', href: getPermalink('/leadership') },
       ],
+    },
+    {
+      text: 'Products',
+      href: getPermalink('/products'),
+      links: [
+        { text: 'Nano NPK', href: getPermalink('/products/nano-npk') },
+        { text: 'Nano Silica', href: getPermalink('/products/nano-silica') },
+        { text: 'Nano Copper', href: getPermalink('/products/nano-copper') },
+        { text: 'Nano Chitosan', href: getPermalink('/products/nano-chitosan') },
+        { text: 'Passion Fruit Nano BioFertiliser', href: getPermalink('/products/nano-minerals') },
+      ],
+    },
+    {
+      text: 'Research',
+      href: getPermalink('/research'),
     },
   ],
   actions: [{ text: 'Partner with us', href: 'https://nanobiotech.com.au/contact', target: '_blank' }],
@@ -31,25 +33,29 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Company',
+      title: 'About Us',
       links: [
-        { text: 'About', href: getPermalink('/about') },
-        { text: 'Services', href: getPermalink('/services') },
+        { text: 'Our Goals', href: getPermalink('/our-goals') },
+        { text: 'Our Science', href: getPermalink('/our-science') },
+        { text: 'Leadership', href: getPermalink('/leadership') },
         { text: 'Contact', href: getPermalink('/contact') },
       ],
     },
     {
-      title: 'Solutions',
+      title: 'Products',
       links: [
-        { text: 'Green solution', href: getPermalink('/services') },
-        { text: 'Crop protection', href: getPermalink('/services') },
+        { text: 'Nano NPK', href: getPermalink('/products/nano-npk') },
+        { text: 'Nano Silica', href: getPermalink('/products/nano-silica') },
+        { text: 'Nano Copper', href: getPermalink('/products/nano-copper') },
+        { text: 'Nano Chitosan', href: getPermalink('/products/nano-chitosan') },
+        { text: 'Passion Fruit Nano BioFertiliser', href: getPermalink('/products/nano-minerals') },
       ],
     },
     {
       title: 'Resources',
       links: [
+        { text: 'Research', href: getPermalink('/research') },
         { text: 'Blog', href: getPermalink('/blog') },
-        //{ text: 'News', href: getPermalink('/news') },
       ],
     },
   ],

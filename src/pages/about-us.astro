@@ -1,0 +1,189 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Button from '~/components/ui/Button.astro';
+
+const metadata = {
+  title: 'About Us | Hoang Nhan NanoBiotech',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero ******************* -->
+
+  <Hero tagline="About Us">
+    <Fragment slot="title">
+      We are HN NanoBiotech — <br class="hidden md:inline" />
+      <span class="text-primary dark:text-white highlight">Pioneer Green Nano Biomaterials</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      A Melbourne-based team of scientists, engineers, and visionaries turning agricultural waste into next-generation
+      crop protection solutions. Explore our goals, the science behind our work, and the people driving it forward.
+    </Fragment>
+  </Hero>
+
+  <!-- Our Goals teaser **************** -->
+
+  <Content
+    isReversed
+    tagline="Our Goals"
+    title="Australian-Made & Research-Driven"
+    items={[
+      {
+        title: 'Waste to Value',
+        description:
+          'We convert abundant agricultural by-products like sugarcane bagasse and rice husks into high-performance nano-biomaterials — closing the loop on farm waste.',
+        icon: 'tabler:recycle',
+      },
+      {
+        title: 'Empowering Farmers',
+        description:
+          'Our nano-solutions are formulated to plug seamlessly into existing irrigation and spray setups — no costly overhauls, just better results at harvest time.',
+        icon: 'tabler:tractor',
+      },
+      {
+        title: 'Collaborative Excellence',
+        description:
+          'We work closely with academic institutions, industry partners, and farmers to ensure every product is grounded in real-world needs and ethical standards.',
+        icon: 'tabler:users',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/team.png',
+      alt: 'Team in farm field',
+      width: 733,
+      height: 400,
+      class: 'mx-auto rounded-md max-w-sm',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Our Mission & Vision</h3>
+      <p>
+        We exist to close the loop on agricultural waste — transforming abundant by-products into high-performance
+        nano-biomaterials that protect crops, restore ecosystems, and empower Australian farmers.
+      </p>
+      <div class="mt-6">
+        <Button variant="secondary" text="Explore Our Goals" href="/our-goals" icon="tabler:arrow-right" />
+      </div>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Our Science teaser **************** -->
+
+  <Content
+    tagline="Our Science"
+    title="Driven by Nanobiotechnology"
+    items={[
+      {
+        title: 'Waste-to-Resource Extraction',
+        description:
+          'We collect sugarcane bagasse, rice husk, and seaweed, then use green chemistry to break them down — without harsh or toxic solvents — into high-purity raw nanomaterials.',
+        icon: 'tabler:leaf',
+      },
+      {
+        title: 'Nanoscale Engineering',
+        description:
+          'Materials are engineered at the nanoscale to penetrate the leaf cuticle and root membrane far more efficiently than standard applications, delivering targeted benefits.',
+        icon: 'tabler:microscope',
+      },
+      {
+        title: 'Custom Formulations',
+        description:
+          'From lab-scale research to scalable production, we formulate stable nano powders and liquids ready for greenhouses and large-scale broadacre farming operations.',
+        icon: 'tabler:flask-2',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/bypro-lab-plants.png',
+      alt: 'By-products to lab plants',
+      width: 1024,
+      height: 416,
+      class: 'mx-auto rounded-md max-w-sm',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">The Platform</h3>
+      <p>
+        Pioneers in transforming agricultural by-products and natural resources into cutting-edge green nano
+        biomaterials that revolutionise plant health and protection.
+      </p>
+      <div class="mt-6">
+        <Button variant="secondary" text="Explore Our Science" href="/our-science" icon="tabler:arrow-right" />
+      </div>
+    </Fragment>
+  </Content>
+
+  <!-- Leadership teaser **************** -->
+
+  <Content
+    isReversed
+    tagline="Leadership"
+    title="Scientific Leadership"
+    items={[
+      {
+        title: 'Deep Expertise in Green Chemistry',
+        description:
+          'Our co-founders bring a rare combination of advanced chemistry knowledge and a passion for sustainable innovation, driving every formulation we bring to market.',
+        icon: 'tabler:flask',
+      },
+      {
+        title: 'Advanced Materials Science',
+        description:
+          'With complementary backgrounds in materials science and green chemistry, they have pioneered eco-friendly nanotechnology solutions derived from natural agricultural by-products.',
+        icon: 'tabler:atom',
+      },
+      {
+        title: 'Field-to-Lab Philosophy',
+        description:
+          'Both founders bring hands-on agronomic understanding alongside laboratory rigour — ensuring our science is grounded in the realities of Australian farming.',
+        icon: 'tabler:tractor',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/lab.jpg',
+      alt: 'Lab facilities',
+      width: 880,
+      height: 1105,
+      class: 'mx-auto rounded-md max-w-sm',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Pioneering the intersection of green chemistry & agriculture.
+      </h3>
+      <p>
+        HN NanoBiotech is led by two distinguished co-founders whose combined expertise forms the foundation of our
+        work.
+      </p>
+      <div class="mt-6">
+        <Button variant="secondary" text="Meet the Leadership" href="/leadership" icon="tabler:arrow-right" />
+      </div>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- CTA **************** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Partner with Us',
+        href: '/contact',
+        icon: 'tabler:calendar-event',
+      },
+    ]}
+    title="Ready to Grow Together?"
+    subtitle="We're actively seeking forward-thinking distributors, agronomists, and trial partners across Australia."
+  />
+</Layout>

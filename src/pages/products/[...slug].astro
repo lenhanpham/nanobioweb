@@ -1,0 +1,110 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Image from '~/components/common/Image.astro';
+import { Icon } from 'astro-icon/components';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const products = await getCollection('product');
+  return products.map((product) => ({
+    params: { slug: product.id },
+    props: { product },
+  }));
+}
+
+const { product } = Astro.props;
+const { data } = product;
+---
+
+<Layout
+  metadata={{
+    title: `${data.name} | HN NanoBiotech`,
+    description: data.subtitle,
+  }}
+>
+  <!-- Hero ******************* -->
+
+  <Hero
+    tagline={data.tagline ?? 'Our Products'}
+    title={data.name}
+    subtitle={data.subtitle}
+  />
+
+  <!-- Product Details ******************* -->
+
+  <section class="py-12 lg:py-16">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6">
+      <div class="lg:flex lg:gap-12 lg:items-start">
+
+        <!-- Image Column -->
+        <div class="hidden lg:flex lg:w-1/3 justify-center items-start sticky top-24">
+          <div class="rounded-xl bg-blue-50 dark:bg-slate-800 p-8 shadow-md">
+            <Image
+              src={data.image.src}
+              alt={data.image.alt}
+              width={200}
+              height={300}
+              objectFit="contain"
+              class="max-h-72 w-auto mx-auto"
+            />
+          </div>
+        </div>
+
+        <!-- Content Column -->
+        <div class="lg:w-2/3">
+          {data.introHeading && (
+            <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-3">
+              {data.introHeading}
+            </h2>
+          )}
+          {data.introBody && (
+            <p class="text-muted dark:text-slate-400 text-lg mb-8">{data.introBody}</p>
+          )}
+
+          {data.items && data.items.length > 0 && (
+            <ul class="space-y-6">
+              {data.items.map((item) => (
+                <li class="flex gap-4">
+                  {item.icon && (
+                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-white p-2 mt-0.5">
+                      <Icon name={item.icon} class="h-5 w-5" />
+                    </div>
+                  )}
+                  <div>
+                    <h3 class="text-lg font-semibold dark:text-white">{item.title}</h3>
+                    <p class="text-muted dark:text-slate-400 mt-1">{item.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Products + CTA ******************* -->
+
+  <div class="text-center pb-8">
+    <a
+      href="/products"
+      class="inline-flex items-center text-sm font-semibold text-primary dark:text-blue-400 hover:underline"
+    >
+      ← Back to all products
+    </a>
+  </div>
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: data.callToAction?.text ?? 'Partner with Us',
+        href: data.callToAction?.href ?? '/contact',
+      },
+    ]}
+    title="Interested in This Product?"
+    subtitle="Contact us to request a sample, field trial, or distributor pricing."
+  />
+</Layout>
