@@ -1,5 +1,9 @@
 {
   "name": "nanobioweb",
   "compatibility_date": "2026-02-26",
-  "pages_build_output_dir": "./dist"
+  "main": "./worker/index.ts",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  }
 }

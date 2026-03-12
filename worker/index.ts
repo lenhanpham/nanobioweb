@@ -1,4 +1,5 @@
 interface Env {
+  ASSETS: Fetcher;
   RESEND_API_KEY: string;
   CONTACT_EMAIL?: string;
 }
@@ -9,9 +10,10 @@ const jsonResponse = (body: unknown, status = 200) =>
     headers: { 'Content-Type': 'application/json' },
   });
 
-const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>');
+const esc = (s: string) =>
+  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>');
 
-export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
+async function handleContact(request: Request, env: Env): Promise<Response> {
   let data: FormData;
   try {
     data = await request.formData();
@@ -81,4 +83,16 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     console.error('Contact form error:', err);
     return jsonResponse({ success: false, error: 'An unexpected error occurred. Please try again.' }, 500);
   }
+}
+
+export default {
+  async fetch(request: Request, env: Env): Promise<Response> {
+    const url = new URL(request.url);
+
+    if (url.pathname === '/api/contact' && request.method === 'POST') {
+      return handleContact(request, env);
+    }
+
+    return env.ASSETS.fetch(request);
+  },
 };
