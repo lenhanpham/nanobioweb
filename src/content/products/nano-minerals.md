@@ -1,32 +1,32 @@
 ---
-name: "Passionfruit Nano BioFertiliser"
-subtitle: "Precision nutrition specially formulated for passion fruit"
-tagline: "Engineered for Passion Fruit Excellence"
+name: 'Passionfruit Nano BioFertiliser'
+subtitle: 'Precision nutrition specially formulated for passion fruit'
+tagline: 'Engineered for Passion Fruit Excellence'
 image:
-  src: "~/assets/images/products/nano-minerals.png"
-  alt: "Nano Minerals NanoBioFertilizer for passion fruit"
-introHeading: "Engineered for Passion Fruit Excellence"
+  src: '~/assets/images/products/nano-minerals.png'
+  alt: 'Nano Minerals NanoBioFertilizer for passion fruit'
+introHeading: 'Engineered for Passion Fruit Excellence'
 introBody: "Born from years of field trials on passion fruit farms, this nano-biofortiliser closes the nutritional gaps that conventional fertilisers cannot reach — delivering minerals directly into the plant's transport system for results you can see at harvest."
 items:
-  - title: "What it is"
-    description: "A proprietary nano-mineral biofortiliser engineered specifically for passion fruit cultivation. Nano-encapsulated calcium, magnesium, boron, and zinc are delivered at sizes below 100 nm, enabling direct vascular uptake for fast, measurable results."
-    icon: "tabler:atom-2"
-  - title: "Growth & Vine Performance"
-    description: "Stimulates vigorous plant growth and promotes strong, lignified shoots. Healthy vines establish faster, produce more lateral branching, and support heavier fruit loads season after season."
-    icon: "tabler:seeding"
-  - title: "Fruit Size & Uniformity"
-    description: "Produces larger, more uniform fruits by optimising cell expansion during the critical fruit-fill stage. Consistent sizing improves pack-out rates and reduces post-harvest losses."
-    icon: "tabler:apple"
-  - title: "Minimises Fruit Cracking"
-    description: "Nano calcium and boron reinforce cell wall integrity, dramatically reducing the incidence of fruit cracking caused by irregular water uptake or rapid growth spurts."
-    icon: "tabler:circle-check"
-  - title: "Flavour & Quality Enhancement"
-    description: "Elevates Brix levels and aromatic compound concentration, enhancing both sweetness and the characteristic tropical flavour profile that premium buyers demand."
-    icon: "tabler:star"
-  - title: "Application"
-    description: "Apply as a foliar spray or through drip fertigation at key growth stages: vigorous vegetative growth, flowering initiation, and early fruit set. Compatible with most existing fertigation programs."
-    icon: "tabler:droplet"
+  - title: 'What it is'
+    description: 'A proprietary nano-mineral biofortiliser engineered specifically for passion fruit cultivation. Nano-encapsulated calcium, magnesium, boron, and zinc are delivered at sizes below 100 nm, enabling direct vascular uptake for fast, measurable results.'
+    icon: 'tabler:atom-2'
+  - title: 'Growth & Vine Performance'
+    description: 'Stimulates vigorous plant growth and promotes strong, lignified shoots. Healthy vines establish faster, produce more lateral branching, and support heavier fruit loads season after season.'
+    icon: 'tabler:seeding'
+  - title: 'Fruit Size & Uniformity'
+    description: 'Produces larger, more uniform fruits by optimising cell expansion during the critical fruit-fill stage. Consistent sizing improves pack-out rates and reduces post-harvest losses.'
+    icon: 'tabler:apple'
+  - title: 'Minimises Fruit Cracking'
+    description: 'Nano calcium and boron reinforce cell wall integrity, dramatically reducing the incidence of fruit cracking caused by irregular water uptake or rapid growth spurts.'
+    icon: 'tabler:circle-check'
+  - title: 'Flavour & Quality Enhancement'
+    description: 'Elevates Brix levels and aromatic compound concentration, enhancing both sweetness and the characteristic tropical flavour profile that premium buyers demand.'
+    icon: 'tabler:star'
+  - title: 'Application'
+    description: 'Apply as a foliar spray or through drip fertigation at key growth stages: vigorous vegetative growth, flowering initiation, and early fruit set. Compatible with most existing fertigation programs.'
+    icon: 'tabler:droplet'
 callToAction:
-  text: "Partner with Us"
-  href: "/contact"
+  text: 'Partner with Us'
+  href: '/contact'
 ---

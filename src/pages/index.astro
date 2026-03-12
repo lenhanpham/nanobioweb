@@ -92,7 +92,12 @@ const products = await getCollection('product');
         Moving from hazardous broad-spectrum chemicals to safe, naturally-derived, induced-resistance solutions.
       </p>
       <div class="text-center mt-6">
-        <Button variant="secondary" text="Explore the science behind our process" href="/our-science" icon="tabler:arrow-right" />
+        <Button
+          variant="secondary"
+          text="Explore the science behind our process"
+          href="/our-science"
+          icon="tabler:arrow-right"
+        />
       </div>
     </Fragment>
 
@@ -139,7 +144,18 @@ const products = await getCollection('product');
                 <p class="text-sm text-muted dark:text-slate-400 mt-1">{product.data.subtitle}</p>
                 <span class="mt-3 inline-flex items-center justify-center rounded-full border border-primary bg-primary px-5 py-2 text-sm font-semibold text-white group-hover:bg-secondary group-hover:border-secondary transition">
                   View details
-                  <svg xmlns="http://www.w3.org/2000/svg" class="ml-1.5 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="ml-1.5 w-4 h-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
                 </span>
               </div>
             </a>
@@ -160,7 +176,12 @@ const products = await getCollection('product');
     title="Data-Driven Results from Our Field Trials"
     subtitle="We don't ask farmers to operate on promises. Our nano-biomaterials are rigorously tested across Australian conditions."
     columns={3}
-    callToAction={{ variant: 'secondary', text: 'See all R&D data and trial sites', href: '/research', icon: 'tabler:arrow-right' }}
+    callToAction={{
+      variant: 'secondary',
+      text: 'See all R&D data and trial sites',
+      href: '/research',
+      icon: 'tabler:arrow-right',
+    }}
     items={[
       {
         title: '30% Higher Nitrogen Efficiency',

@@ -37,9 +37,11 @@ const {
       ...((classes?.items as Record<string, never>) ?? {}),
     }}
   />
-  {callToAction && (
-    <div class="text-center mt-8">
-      <Button {...callToAction} />
-    </div>
-  )}
+  {
+    callToAction && (
+      <div class="text-center mt-8">
+        <Button {...callToAction} />
+      </div>
+    )
+  }
 </WidgetWrapper>

@@ -9,8 +9,7 @@ const jsonResponse = (body: unknown, status = 200) =>
     headers: { 'Content-Type': 'application/json' },
   });
 
-const esc = (s: string) =>
-  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>');
+const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>');
 
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   let data: FormData;
@@ -38,7 +37,10 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 
   if (!apiKey) {
     return jsonResponse(
-      { success: false, error: 'Email service is not configured. Please contact us directly at info@nanobiotech.com.au.' },
+      {
+        success: false,
+        error: 'Email service is not configured. Please contact us directly at info@nanobiotech.com.au.',
+      },
       500
     );
   }

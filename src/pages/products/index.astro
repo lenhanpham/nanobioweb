@@ -34,12 +34,8 @@ const products = await getCollection('product');
   <section class="py-12 lg:py-16">
     <div class="mx-auto max-w-7xl px-4 sm:px-6">
       <div class="text-center mb-10">
-        <p class="text-base font-semibold uppercase tracking-widest text-primary dark:text-blue-200">
-          Our Products
-        </p>
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight dark:text-white mt-2">
-          The Core Range
-        </h2>
+        <p class="text-base font-semibold uppercase tracking-widest text-primary dark:text-blue-200">Our Products</p>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight dark:text-white mt-2">The Core Range</h2>
         <p class="mt-4 text-xl text-muted dark:text-slate-400">
           Click on any product to explore full details, benefits, and application guides.
         </p>
@@ -67,13 +63,22 @@ const products = await getCollection('product');
                   {product.data.name}
                 </h3>
                 {product.data.subtitle && (
-                  <p class="mt-2 text-sm text-muted dark:text-slate-400 flex-grow">
-                    {product.data.subtitle}
-                  </p>
+                  <p class="mt-2 text-sm text-muted dark:text-slate-400 flex-grow">{product.data.subtitle}</p>
                 )}
                 <span class="mt-4 inline-flex items-center justify-center rounded-full border border-primary bg-primary px-6 py-2.5 text-sm font-semibold text-white group-hover:bg-secondary group-hover:border-secondary transition">
                   View details
-                  <svg xmlns="http://www.w3.org/2000/svg" class="ml-1.5 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="ml-1.5 w-4 h-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
                 </span>
               </div>
             </a>
