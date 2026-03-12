@@ -19,7 +19,7 @@ export const headerData = {
         { text: 'Nano Silica', href: getPermalink('/products/nano-silica') },
         { text: 'Nano Copper', href: getPermalink('/products/nano-copper') },
         { text: 'Nano Chitosan', href: getPermalink('/products/nano-chitosan') },
-        { text: 'Passion Fruit Nano BioFertiliser', href: getPermalink('/products/nano-minerals') },
+        { text: 'NanoBioFertiliser', href: getPermalink('/products/nano-minerals') },
       ],
     },
     {
@@ -48,7 +48,7 @@ export const footerData = {
         { text: 'Nano Silica', href: getPermalink('/products/nano-silica') },
         { text: 'Nano Copper', href: getPermalink('/products/nano-copper') },
         { text: 'Nano Chitosan', href: getPermalink('/products/nano-chitosan') },
-        { text: 'Passion Fruit Nano BioFertiliser', href: getPermalink('/products/nano-minerals') },
+        { text: 'Passionfruit Nano BioFertiliser', href: getPermalink('/products/nano-minerals') },
       ],
     },
     {

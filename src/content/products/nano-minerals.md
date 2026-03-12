@@ -1,5 +1,5 @@
 ---
-name: "Passion Fruit Nano BioFertiliser"
+name: "Passionfruit Nano BioFertiliser"
 subtitle: "Precision nutrition specially formulated for passion fruit"
 tagline: "Engineered for Passion Fruit Excellence"
 image:
