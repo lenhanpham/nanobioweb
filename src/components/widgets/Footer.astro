@@ -73,6 +73,33 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
           </div>
         ))
       }
+
+      <!-- Contact column -->
+      <div class="col-span-6 md:col-span-3 lg:col-span-2">
+        <div class="dark:text-gray-300 font-medium mb-2">Contact</div>
+        <ul class="text-sm space-y-3">
+          <li class="flex items-start gap-2 text-muted dark:text-gray-400">
+            <Icon name="tabler:phone" class="w-4 h-4 mt-0.5 shrink-0" />
+            <a href="tel:XXXXXXXXX" class="hover:text-gray-700 hover:underline transition duration-150 ease-in-out">
+              XXX XXX XXX
+            </a>
+          </li>
+          <li class="flex items-start gap-2 text-muted dark:text-gray-400">
+            <Icon name="tabler:mail" class="w-4 h-4 mt-0.5 shrink-0" />
+            <a href="mailto:contact@nanobiotech.com.au" class="hover:text-gray-700 hover:underline transition duration-150 ease-in-out break-all">
+              contact@nanobiotech.com.au
+            </a>
+          </li>
+          <li class="flex items-start gap-2 text-muted dark:text-gray-400">
+            <Icon name="tabler:map-pin" class="w-4 h-4 mt-0.5 shrink-0" />
+            <address class="not-italic leading-snug">
+              Unit XXX, YYY Name of Street,<br />
+              Melbourne, VIC 3000<br />
+              Australia
+            </address>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
       {
