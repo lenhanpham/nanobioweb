@@ -26,6 +26,10 @@ export const headerData = {
       text: 'Research',
       href: getPermalink('/research'),
     },
+    {
+      text: 'Contact Us',
+      href: getPermalink('/contact'),
+    },
   ],
   actions: [{ text: 'Partner with us', href: 'https://nanobiotech.com.au/contact', target: '_blank' }],
 };
